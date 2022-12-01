@@ -9,14 +9,14 @@ else
    apt install curl -y < "/dev/null"
 fi
 echo "=================================================="
-curl -s https://api.nodes.guru/logo.sh | bash && sleep 3
+curl -s https://raw.githubusercontent.com/nodesshablya/nibiru_shablya_testnet/main/shablya.sh | bash && sleep 3
 echo "=================================================="
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Aborting: run as root user!"
     exit 1
 fi
 echo -e 'Setting up swapfile...\n'
-curl -s https://api.nodes.guru/swap4.sh | bash
+curl -s https://raw.githubusercontent.com/nodesshablya/aleo_shablya_testnet/main/swap4.sh | bash
 echo "=================================================="
 echo -e 'Installing dependencies...\n' && sleep 1
 apt update
